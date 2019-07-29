@@ -1,0 +1,148 @@
+* {
+    margin: 0;
+}
+
+body {
+    background-color: rgb(250, 245, 245);
+}
+
+header {
+    background-image: url(https://i.loli.net/2019/07/19/5d313d854438229983.jpg);
+    background-repeat: no-repeat;
+    text-align: center;
+    height: 200px;
+}
+
+ul{
+    padding: 0;
+}
+
+li {
+    display: inline-block;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+li a {
+    text-decoration: none;
+    color: white;
+    font-size: 150%;
+    border: 1.5px solid white;
+    border-radius: 20px;
+}
+
+li a:hover{
+    background-color: rgb(245, 170, 84);
+    border-radius: 20px;
+}
+/*头像*/
+header .loge img {
+    width: 250x;
+    height: 106px;
+    display: inline-block;
+    border-radius: 50%;
+    border:1px solid gray;
+    transition: all 2.0s;   
+}
+
+header .loge img:hover{
+    transform: rotate(-360deg);
+}
+
+.box {
+    overflow: auto;
+    width: 1210px;
+    height: 250px;
+    margin: auto;
+}
+.a,.b,.c {
+    float: left;
+    height: 200px;
+    width: 350px;
+    margin: 20px;
+    background-repeat: no-repeat;
+    background-color: white;
+}
+
+
+.a {
+    background-size: 100%;
+}
+
+.b {
+    background-size: 100%;
+}
+
+.c {
+    background-size: 100%;
+}
+
+.web {
+    float: left;
+    height: 150px;
+    width: 300px;
+}
+/*边框*/
+.bian {
+    height: 120px;
+    width: 250px;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border: 1px solid white;
+}
+.bian:hover {
+    border: red;
+}
+
+.d,.e,.f {
+    float: left;
+}
+
+.box1 {
+    width: 1210px;
+    height: 480px;
+    margin: auto;
+}
+.d {
+    width: 800px;
+    height: 440px;
+    background-color: red;
+}
+.e,.f {
+    float: left;
+    width: 290px;
+    height: 200px;
+    background-color: blue;
+}
+
+.d,.e,.f {
+    margin: 20px;
+}
+
+footer {
+    background-color:rgb(34, 30, 30);
+    color: gray;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 60px;
+}
+
+.end {
+    color: white;
+    text-decoration: none;
+
+}
+
+.end1 {
+    color: rgb(231, 211, 211);
+    text-decoration: none;
+}
+
+.end2 {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+}
