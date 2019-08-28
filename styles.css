@@ -188,7 +188,7 @@ footer div {
 }
 
 #welcome .close a:hover {
-    border: 1px solid gray);
+    border: 1px solid gray;
     opacity: 0.8;
     border-radius: 5px;
     background-color: green;
