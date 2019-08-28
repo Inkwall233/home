@@ -4,10 +4,15 @@
 <head>
     <title>城墙墨の小破站</title>
     <link rel="stylesheet" href="styles.css">
+    <script>
+        function closeBox(obj){
+            document.getElementById(obj).style.display="none";
+        }
+    </script>
 </head>
     
 <body>
-    <header>
+    <div class="header">
         <nav>
             <ul>
                 <li><a href="index.html">&nbsp;&nbsp;主页&nbsp;&nbsp;</a></li>
@@ -19,7 +24,7 @@
                 <li><a href="about.html">&nbsp;&nbsp;关于&nbsp;&nbsp;</a></li>
             </ul>
         </nav>
-    </header>
+    </div>
 
     <div class="box">
         <div class="a" style="background-image: url(https://i.loli.net/2019/07/23/5d36730118a9275924.png)">
@@ -42,16 +47,35 @@
     </div>
     
     <div class="box1">
-        <div class="d"></div>
+        <div class="d">
+            <div class="name">
+
+            </div>
+        </div>
         <div class="e"></div>
         <div class="f"></div>
     </div>
-    
+
+    <div id="welcome">
+        <h3>欢迎</h3>
+        你好啊，来看我的小破站啦!!!
+        <div class="close">
+            <a href="#" onclick="javascript:closeBox('welcome')">对啊</a>
+        </div>
+    </div>    
+
     <footer>
-        powered by 
-        城墙墨<br><br><br>
-        <a class="end1" href="http://wpa.qq.com/msgrd?v=3&uin=2667229986&site=qq&menu=yes">联系我&nbsp;&nbsp;&nbsp;&nbsp;<img class="end2" src="https://i.loli.net/2019/07/23/5d366d4c92ba542364.jpg" alt="Q我吧" title="Q我吧"/></a>
+        <div>
+            <a class="end1" href="http://wpa.qq.com/msgrd?v=3&uin=2667229986&site=qq&menu=yes">联系我&nbsp;&nbsp;&nbsp;&nbsp;<img class="end2" src="https://i.loli.net/2019/07/23/5d366d4c92ba542364.jpg" alt="Q我吧" title="Q我吧"/></a>
+            <br><br>
+            本站建立于2019.7.18
+            <br>
+            已经运行(存在)了*天*小时(自己算(✿◡‿◡)咱也不会弄)
+        </div>
+        
     </footer>
+    
+
     
 </body>
 </html>
