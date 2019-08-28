@@ -3,10 +3,11 @@
 }
 
 body {
-    background-color: rgb(250, 245, 245);
+    background-color: rgb(238, 234, 234);
+    width: 1519.2px;
 }
 
-header {
+.header {
     background-image: url(https://i.loli.net/2019/07/19/5d313d854438229983.jpg);
     background-repeat: no-repeat;
     text-align: center;
@@ -38,7 +39,7 @@ li a:hover{
     border-radius: 20px;
 }
 /*头像*/
-header .loge img {
+.header .loge img {
     width: 250x;
     height: 106px;
     display: inline-block;
@@ -47,13 +48,13 @@ header .loge img {
     transition: all 2.0s;   
 }
 
-header .loge img:hover{
+.header .loge img:hover{
     transform: rotate(-360deg);
 }
 
 .box {
     overflow: auto;
-    width: 1210px;
+    width: 1190px;
     height: 250px;
     margin: auto;
 }
@@ -102,7 +103,7 @@ header .loge img:hover{
 }
 
 .box1 {
-    width: 1210px;
+    width: 1190px;
     height: 480px;
     margin: auto;
 }
@@ -122,12 +123,23 @@ header .loge img:hover{
     margin: 20px;
 }
 
+.d .name {
+    float: left;
+    color: black;
+    width: 150px;
+    height: 200px;
+}
 footer {
     background-color:rgb(34, 30, 30);
     color: gray;
-    text-align: center;
+    text-align: left;
     padding-top: 20px;
     padding-bottom: 60px;
+}
+
+footer div {
+    width: 1200px; 
+    margin: auto;
 }
 
 .end {
@@ -145,4 +157,40 @@ footer {
     height: 40px;
     width: 40px;
     border-radius: 50%;
+}
+
+#welcome {
+    padding: 20px;
+    background-color: white;
+    width: 150px;
+    height: 92.7px;
+    float: right;
+    position: fixed;
+    right: 10px;
+    bottom: 25px;
+    border-radius: 15px;
+    opacity: 0.7;
+}
+
+#welcome:hover {
+    box-shadow: gray 3px 2px 5px;
+    opacity: 1;
+}
+
+#welcome .close {
+    text-align: center;
+    
+}
+
+#welcome .close a{
+    padding:4px;
+    text-decoration: none;
+}
+
+#welcome .close a:hover {
+    border: 1px solid gray);
+    opacity: 0.8;
+    border-radius: 5px;
+    background-color: green;
+    
 }
