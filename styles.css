@@ -1,67 +1,165 @@
-* {
+*{
     margin: 0;
 }
 
 body {
     background-color: rgb(238, 234, 234);
-    width: 1519.2px;
+}
+#welcome-about { 
+    position: relative;
+    height: 650px;
+    width: 100%;
+    background-size: cover;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+}
+/*导航栏*/
+#header {
+    left: 0;
+    right: 0;
+    top: 0;
+    position: fixed;
+    height: 50px;
+    padding: 10px;
+    background: rgba(40,41,40,.6)
 }
 
-.header {
-    background-image: url(https://i.loli.net/2019/07/19/5d313d854438229983.jpg);
-    background-repeat: no-repeat;
+#header-wrapper {
+    width: 1200px;
+    height: 50px;
+    margin: auto;
+}
+
+#header #header-inner {
+    width: 1160px;
+    height: 50px;
+    margin: auto;
+}
+
+#header #logal {
+    width: 137px;
+    height: 50px;
+    margin-right: 20px;
+    float: left;
+    background-image: url(/images/logl.png);
+    background-size: 100%;
+}
+
+#header-inner #logal #logal-href {
+    width: 137px;
+    height: 50px;
+    float: left;
+}
+
+#header nav {
+    padding-left: 20px;
+}
+
+#header .main-nav-link {
+    text-decoration: none;
+    color: white;
+    font-family: Lato,"Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+#header .main-nav-link:hover {
+    color: deepskyblue;
+}
+
+li{
+    display: inline-block;
+    line-height: 50px;
+    padding: 0 15px;
+    opacity: 1;
+}
+/*meta-title*/
+#welcome-about .site-meta {
+    height: 370px;
     text-align: center;
+    padding: 20px 0;
+}
+
+#welcome-about .kongBai {
     height: 200px;
 }
 
-ul{
-    padding: 0;
+#site-title {
+    height: 200px;
+    margin-bottom: 80px;
 }
 
-li {
+#animate {
+    text-shadow: 1px 1px 0 #ff3f1a, -1px -1px 0 #00a7e0;
+    font-family: STHupo;
+    position: relative;
     display: inline-block;
-    padding-left: 50px;
-    padding-right: 50px;
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding: 0 40px;
+    color: #fff;
+    font-size: 100px;
+    height: 100px;
+    line-height: 100px;
+    transition: opacity 0.7s;
 }
 
-li a {
-    text-decoration: none;
-    color: white;
-    font-size: 150%;
-    border: 1.5px solid white;
-    border-radius: 20px;
+#animate:hover {
+    opacity: 0.5;
 }
 
-li a:hover{
-    background-color: rgb(245, 170, 84);
-    border-radius: 20px;
+#welcome-about .site-master {
+    text-align: center;
+    width: 1600px;
+    padding: 10px 0;
+    margin: auto;
+    font-size: 16px;
+    opacity: .98;
+    background: rgba(230,244,249,.8);
+    z-index: 1;
+    animation: b 1s ease-out;
+    position: relative;
+    border-radius: 5px;   
 }
-/*头像*/
-.header .loge img {
-    width: 250x;
-    height: 106px;
-    display: inline-block;
+
+#welcome-about .site-master .site-master-avatar {
+    height: 100px;
+    width: 100px;
     border-radius: 50%;
-    border:1px solid gray;
-    transition: all 2.0s;   
+
+    transition: all 2.0s;
 }
 
-.header .loge img:hover{
-    transform: rotate(-360deg);
+#welcome-about .site-master .site-master-avatar:hover {
+    transform: rotate(-360deg);   
 }
 
-.box {
+#welcome-about .site-master h2 {
+    display: block;
+    font: 400 16px/1.62 "Microsoft JhengHei", sans-serif;
+    font-size: 18px;
+    -webkit-margin-before: 0.83em;
+    -webkit-margin-after: 0.83em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    font-weight: bold;
+}
+
+#welcome-about .site-master span:nth-child(1){
+    color: #00a7e0!important;
+}
+
+#welcome-about .site-master span:nth-child(2) {
+    color: #ff3f1a!important;
+}
+/*脖子部分*/
+#neck {
     overflow: auto;
-    width: 1190px;
+    width: 1200px;
     height: 250px;
     margin: auto;
+    margin-top: 30px;
 }
 .a,.b,.c {
     float: left;
     height: 200px;
-    width: 350px;
+    width: 360px;
     margin: 20px;
     background-repeat: no-repeat;
     background-color: white;
@@ -85,6 +183,7 @@ li a:hover{
     height: 150px;
     width: 300px;
 }
+
 /*边框*/
 .bian {
     height: 120px;
@@ -98,37 +197,72 @@ li a:hover{
     border: red;
 }
 
-.d,.e,.f {
-    float: left;
+/*中间部分*/
+#content-wrap {
+    width: 100%;
 }
 
-.box1 {
-    width: 1190px;
-    height: 480px;
+.wrapper {
+    width: 1200px;
     margin: auto;
 }
-.d {
-    width: 800px;
-    height: 440px;
-    background-color: red;
-}
-.e,.f {
-    float: left;
-    width: 290px;
-    height: 200px;
-    background-color: blue;
+
+.inner {
+    width: 1160px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: auto;
 }
 
-.d,.e,.f {
-    margin: 20px;
+#plugin-list-header {
+    width: 1160px;
+    height: 40px;
+    margin-top: 40px;
+    margin-bottom: 40px;
 }
 
-.d .name {
+#plugin-list-header #plugin-list-title {
     float: left;
-    color: black;
-    width: 150px;
-    height: 200px;
+    font-weight: 300;
+    font-style: inherit;
 }
+
+#plugin-list-header #plugin-list-count,#plugin-search-input {
+    float: right;
+}
+
+#plugin-list-count {
+    line-height: 40px;
+    padding-top: 0;
+    padding-right: 15px;
+}
+
+#plugin-search-input {
+    width: 50%;
+    font-size: 16px;
+    font-family: inherit;
+    border: 1px solid #e3e3e3;
+    padding: 10px;
+    margin-left: 10px;
+}
+
+#plugin-list {
+    padding: 0;
+    width: 1200px;
+}
+
+#plugin-list .plugin-on {
+    padding: 10px;
+    width: 360px;
+    height: 347.6px;
+}
+
+/*footer*/
+.end1 {
+    color: rgb(231, 211, 211);
+    text-decoration: none;
+}
+
 footer {
     background-color:rgb(34, 30, 30);
     color: gray;
@@ -142,23 +276,40 @@ footer div {
     margin: auto;
 }
 
-.end {
-    color: white;
-    text-decoration: none;
-
-}
-
-.end1 {
-    color: rgb(231, 211, 211);
-    text-decoration: none;
-}
-
 .end2 {
     height: 40px;
     width: 40px;
     border-radius: 50%;
 }
 
+#span_day {
+    animation: change 10s infinite;
+}
+
+@keyframes change {
+    0% {
+        color: #5cb85c;
+    }
+    25% {
+        color: #556bd8;
+    }
+    50% {
+        color: #e40707;
+    }
+    75% {
+        color: #66e616;
+    }
+    100% {
+        color: #67bd31;
+    }
+}
+
+#footer_auto {
+    text-decoration: none;
+    color: white;
+    font-family: Lato,"Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+/*welcome*/
 #welcome {
     padding: 20px;
     background-color: white;

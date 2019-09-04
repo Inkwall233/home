@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" id="mixia_vpid">
+    <link rel="shortcut icon" href="https://www.onzt.cn/favicon.ico">
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <title>2019年暑假结束倒计时 - XiCenEmperor</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script type="text/javascript" href="main.js"></script>
+    <style>
+        * {
+    box-sizing: border-box;
+}
+body {
+    background-image: url(https://cdn-1252875933.cos.ap-beijing.myqcloud.com/images/2019/08/5d42d20f1c274.png);
+    background-size: 100%;
+    margin: 0;
+}
+body div {
+    position: absolute;
+    top: calc(50% - 207px);
+    width: 100%;
+}
+body div i {
+    font-family:"Microsoft YaHei";
+    font-style: normal;
+    width: 200px;
+    height: 200px;
+    line-height: 200px;
+    border-radius: 100%;
+    display: block;
+    margin: 0 auto;
+    background: #fff;
+    text-align: center;
+    color: #F4696A;
+    font-size: 6em;
+}
+body div p, body div h2 {
+    color: #fff;
+    text-align: center;
+    margin: 0;
+    margin-top: 20px;
+}
+body div blockquote {
+    background: #fff;
+    text-align: center;
+    max-width: 352px;
+    margin: 0 auto;
+    margin-top: 20px;
+    border-radius: 6px;
+    padding: 10px;
+    overflow-y: auto;
+    color: #5a5f69;
+}
+body div blockquote::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+body div blockquote::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: #888;
+}
+body div a, body div a:hover, body div a:focus{
+    transition: all .35s;
+    width: 100px;
+    display: block;
+    color: red;
+    margin: 0 auto;
+    margin-top: 20px;
+    text-decoration: none;
+    outline: none;
+    border: 1px solid #fff;
+    border-radius: 6px;
+    text-align: center;
+    line-height: 33px;
+}
+body div a:hover {
+    background: rgba(255,255,255,.2);
+}
+
+    </style>
+</head>
+
+  <body>
+      <div>
+          <i>中秋</i>
+          <h2>
+          
+<span id="span_dt_dt"  ></span>
+<SCRIPT language=javascript>
+//document.write("");
+function show_time(){
+	window.setTimeout("show_time()", 1000);
+	BirthDay=new Date("09-13-2019");//改成你的计时日期
+	today=new Date();
+	timeold=(BirthDay.getTime()-today.getTime());
+	sectimeold=timeold/1000
+	secondsold=Math.floor(sectimeold);
+	msPerDay=24*60*60*1000
+	e_daysold=timeold/msPerDay
+	daysold=Math.floor(e_daysold);
+	e_hrsold=(e_daysold-daysold)*24;
+	hrsold=Math.floor(e_hrsold);
+	e_minsold=(e_hrsold-hrsold)*60;
+	minsold=Math.floor((e_hrsold-hrsold)*60);
+	seconds=Math.floor((e_minsold-minsold)*60);
+	span_dt_dt.innerHTML=daysold+"天"+hrsold+"小时"+minsold+"分"+seconds+"秒" ;
+}
+show_time();
+//-->
+</SCRIPT>
+          
+          </h2>
+          <p></p>
+          <center><blockquote>have a good time</blockquote></center>
+          <a>城墙墨</a>
+      </div>
+</body>
+</html>
