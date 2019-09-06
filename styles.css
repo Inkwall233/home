@@ -1,9 +1,11 @@
 *{
     margin: 0;
+    padding: 0;
 }
 
 body {
     background-color: rgb(238, 234, 234);
+    width: 100%;
 }
 #welcome-about { 
     position: relative;
@@ -41,7 +43,7 @@ body {
     height: 50px;
     margin-right: 20px;
     float: left;
-    background-image: url(/images/logl.png);
+    background-image: url(images/logl.png);
     background-size: 100%;
 }
 
@@ -84,7 +86,7 @@ li{
 
 #site-title {
     height: 200px;
-    margin-bottom: 80px;
+    margin-bottom: 20px;
 }
 
 #animate {
@@ -151,7 +153,7 @@ li{
 /*脖子部分*/
 #neck {
     overflow: auto;
-    width: 1200px;
+    width: 1170px;
     height: 250px;
     margin: auto;
     margin-top: 30px;
@@ -160,7 +162,7 @@ li{
     float: left;
     height: 200px;
     width: 360px;
-    margin: 20px;
+    margin: 15px;
     background-repeat: no-repeat;
     background-color: white;
 }
@@ -191,10 +193,10 @@ li{
     margin: auto;
     margin-top: 30px;
     margin-bottom: 30px;
-    border: 1px solid white;
+    border: 1.3px solid white;
 }
 .bian:hover {
-    border: red;
+    border:none;
 }
 
 /*中间部分*/
@@ -203,22 +205,19 @@ li{
 }
 
 .wrapper {
-    width: 1200px;
+    width: 1170px;
     margin: auto;
 }
 
 .inner {
-    width: 1160px;
-    padding-left: 20px;
-    padding-right: 20px;
-    margin: auto;
+    width: 1170px;
 }
-
+/*搜索部分*/
 #plugin-list-header {
-    width: 1160px;
+    width: 1140px;
     height: 40px;
-    margin-top: 40px;
-    margin-bottom: 40px;
+    margin: auto;
+    margin-bottom: 50px;
 }
 
 #plugin-list-header #plugin-list-title {
@@ -245,18 +244,88 @@ li{
     padding: 10px;
     margin-left: 10px;
 }
-
+/*博客*/
 #plugin-list {
-    padding: 0;
-    width: 1200px;
+    width: 750px;
 }
 
 #plugin-list .plugin-on {
-    padding: 10px;
-    width: 360px;
-    height: 347.6px;
+    margin-left: 15px;
+    width: 750px;
+    height: 250px;
+    margin-bottom: 20px;
+    background: white;
+    padding: 25px;
+
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    animation-name: fadeInLeft;    
 }
 
+@keyframes fadeInLeft  {
+    from {
+        opacity: 0;
+        transform: translate3d(0, 100%, 0);
+    }   
+      to {
+        opacity: 1;
+        transform: none;
+    }      
+}
+#plugin-list .plugin-screenshot,.plugin-introduce,.plugin-introduce-cate {
+    float: left;
+}
+
+#plugin-list .plugin-screenshot {
+    width: 388.3px;
+    height: 240px;
+}
+
+#plugin-list .plugin-introduce {
+    width: 320px;
+    height: 180px;
+    margin-left: 30px;
+    background: white;
+}
+
+.plugin-introduce-cate {
+    width:320px;
+    height: 30px;
+    background: yellow;
+    margin-left: 30px;
+    margin-top: 20px;
+}
+#plugin-list .img-a {
+    width: auto;
+    height: auto;
+}
+
+#plugin-list .screenshot-img {
+    width: 388.3px;
+    height: 240px;
+}
+
+#plugin-list h2 {
+    margin-bottom: 25px;
+}
+#plugin-list .h-a {
+    width:auto;
+    height: auto;
+    color: black;
+    text-decoration: none;
+    font-family: Microsoft JhengHei;
+}
+
+#plugin-list .h-a:hover {
+    color: rgb(26, 218, 20);
+    transition-duration: .5s;
+}
+.plugin-abstract {
+    font-size: 15px;
+    line-height: 20px;
+    font-family: suxingme,"Open Sans",Arial,"Hiragino Sans GB","Microsoft YaHei","STHeiti","WenQuanYi Micro Hei",SimSun,sans-serif;
+    opacity: .8;
+}
 /*footer*/
 .end1 {
     color: rgb(231, 211, 211);
@@ -272,8 +341,9 @@ footer {
 }
 
 footer div {
-    width: 1200px; 
+    width: 1170px; 
     margin: auto;
+    padding-left: 40px;
 }
 
 .end2 {
