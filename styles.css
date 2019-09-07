@@ -22,6 +22,7 @@ body {
     top: 0;
     position: fixed;
     height: 50px;
+    width: 100%;
     padding: 10px;
     background: rgba(40,41,40,.6)
 }
@@ -108,7 +109,7 @@ li{
 
 #welcome-about .site-master {
     text-align: center;
-    width: 1600px;
+    width: 1200px;
     padding: 10px 0;
     margin: auto;
     font-size: 16px;
@@ -125,7 +126,7 @@ li{
     width: 100px;
     border-radius: 50%;
 
-    transition: all 2.0s;
+    transition: all 1.5s;
 }
 
 #welcome-about .site-master .site-master-avatar:hover {
@@ -256,10 +257,11 @@ li{
     margin-bottom: 20px;
     background: white;
     padding: 25px;
+    position: relative;
 
     animation-duration: 1s;
     animation-fill-mode: both;
-    animation-name: fadeInLeft;    
+    animation-name: fadeInLeft;
 }
 
 @keyframes fadeInLeft  {
@@ -288,13 +290,6 @@ li{
     background: white;
 }
 
-.plugin-introduce-cate {
-    width:320px;
-    height: 30px;
-    background: yellow;
-    margin-left: 30px;
-    margin-top: 20px;
-}
 #plugin-list .img-a {
     width: auto;
     height: auto;
@@ -303,6 +298,7 @@ li{
 #plugin-list .screenshot-img {
     width: 388.3px;
     height: 240px;
+    size: 100%;
 }
 
 #plugin-list h2 {
@@ -325,6 +321,52 @@ li{
     line-height: 20px;
     font-family: suxingme,"Open Sans",Arial,"Hiragino Sans GB","Microsoft YaHei","STHeiti","WenQuanYi Micro Hei",SimSun,sans-serif;
     opacity: .8;
+}
+
+.plugin-introduce-cate {
+    width:320px;
+    height: 30px;
+    /*background: yellow;*/
+    margin-left: 30px;
+    margin-top: 20px;
+}
+
+.plugin-introduce-cate .cate-a {
+    line-height: 30px;
+    margin-left: 10px;
+    text-decoration: none;
+    color: #fc6423;
+}
+
+.plugin-introduce-cate a:hover {
+    text-decoration: none;
+    color: yellowgreen;
+
+}
+/*time设置，父级需要设置relative*/
+.post-date {
+    background-color: #fc6423;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12);
+    position: absolute;
+    top: -20px;
+    left: -30px;
+    height: 60px;
+    width: 70px;
+    padding-top: 10px;
+    border-radius: 100px;
+    color: #fff;
+    text-align: center;
+    line-height: 1.1;
+}
+
+.post-month {
+    text-align: center;
+    line-height: 1.1;
+}
+
+.post-day {
+    font-size: 30px;
+    font-weight: 700;
 }
 /*footer*/
 .end1 {
