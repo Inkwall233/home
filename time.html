@@ -4,9 +4,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" id="mixia_vpid">
     <link rel="shortcut icon" href="https://www.onzt.cn/favicon.ico">
     <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
-    <title>2019年暑假结束倒计时 - XiCenEmperor</title>
-    <link rel="stylesheet" type="text/css" href="styles.css">
-    <script type="text/javascript" href="main.js"></script>
+    <title>2019年国庆七天乐倒计时 - XiCenEmperor</title>
+ 
     <style>
         * {
     box-sizing: border-box;
@@ -77,21 +76,50 @@ body div a, body div a:hover, body div a:focus{
 body div a:hover {
     background: rgba(255,255,255,.2);
 }
+#span_day {
+    animation: change 10s infinite;
+}
+
+@keyframes change {
+    0% {
+        color: #000000;
+    }
+    25% {
+        color: #008000;
+    }
+    50% {
+        color: 	#DC143C;
+    }
+    75% {
+        color: #FFD700;
+    }
+    100% {
+        color: #F0F8FF;
+    }
+}
+
+@media screen and (max-width: 800px){
+	body {
+		background-image: url(https://cf.cndrew.cn/images/2019/09/16/3f59636f0b18cb1f42d88826794989c5.jpg);
+		background-size: 100%;
+		margin: 0;
+	}
+}
 
     </style>
 </head>
 
   <body>
       <div>
-          <i>中秋</i>
+          <i>国庆</i>
           <h2>
           
-<span id="span_dt_dt"  ></span>
+<span id="span_day"  ></span>
 <SCRIPT language=javascript>
 //document.write("");
 function show_time(){
 	window.setTimeout("show_time()", 1000);
-	BirthDay=new Date("09-13-2019");//改成你的计时日期
+	BirthDay=new Date("10-01-2019");//改成你的计时日期
 	today=new Date();
 	timeold=(BirthDay.getTime()-today.getTime());
 	sectimeold=timeold/1000
@@ -104,7 +132,7 @@ function show_time(){
 	e_minsold=(e_hrsold-hrsold)*60;
 	minsold=Math.floor((e_hrsold-hrsold)*60);
 	seconds=Math.floor((e_minsold-minsold)*60);
-	span_dt_dt.innerHTML=daysold+"天"+hrsold+"小时"+minsold+"分"+seconds+"秒" ;
+	span_day.innerHTML=daysold+"天"+hrsold+"小时"+minsold+"分"+seconds+"秒" ;
 }
 show_time();
 //-->
