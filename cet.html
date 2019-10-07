@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" id="mixia_vpid">
+		<link rel="shortcut icon" href="https://cdn-1252875933.cos.ap-beijing.myqcloud.com/images/2019/09/5d7f434612d47.ico">
+		<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+		<title>2019年英语四级倒计时</title>
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			
+			body {
+				background-image: url(https://cf.cndrew.cn/images/2019/09/03/bg.jpg);
+				background-size: 100%;
+				height: 100%;
+			}
+			
+			body #box {
+			    width: 100%;
+				margin-top: 150px;
+				text-align: center
+			}
+			#animate {
+			    text-shadow: 1px 1px 0 #1aff2d, -1px -1px 0 #e0dc00;
+			    font-family: STHupo;
+			    position: relative;
+			    display: inline-block;
+			    padding: 0 40px;
+			    color: rgb(255, 255, 255);
+			}
+            .con {
+                font-size: 100px;
+                height: 100px; 
+                line-height: 100px;
+                margin-right: 50px;
+            } 
+            .con1 {
+                font-size: 100px;
+                height: 100px; 
+                line-height: 100px;
+            } 
+            .res-date {
+                text-shadow: 0 0 0 #ff3f1a, -1px -1px 0 #00a7e0;
+                position: absolute;
+                top: -20px;
+                right: -30px;
+                height: 170px;
+                width: 170px;
+                padding-top: 10px;
+                border-radius: 50%;
+                color: #fc6423;
+                text-align: center;
+                transition: opacity 0.7s ease-in-out;
+            }
+            .res-date:hover {
+                opacity: 0.5;
+            }
+            .res-day {
+                text-align: center;
+                line-height: 1.1;
+                font-size: 60px;
+            }
+
+            .res-hour{
+                font-size: 60px;
+                font-weight: 700;
+            }
+            #autor {
+                width: 100px;
+                margin: auto;
+                padding: 10px;
+                background:  rgba(41, 40, 40, 0.6);
+                border-radius: 30px;
+                border:1px  white;
+            }
+            #autor a {
+                color: #00a7e0;
+                text-decoration: none;
+            }
+            @keyframes barrage{
+                0%{
+                    left:100%;
+
+                }
+                100%{
+                    left:-30%;
+
+                }
+            }
+
+
+            #danMu {
+                position:absolute;
+                top: 40%;
+                animation:barrage 10s infinite;
+            }
+           
+            @media (max-width: 991px){
+                body {
+                    background-image: url(https://cf.cndrew.cn/images/2019/09/16/3f59636f0b18cb1f42d88826794989c5.jpg);
+                    background-size: 100%;
+                    margin: 0;
+                }
+                .con {
+                    font-size: 50px;
+                    height: 50px; 
+                    line-height: 50px;
+                    margin-right: 30px;
+                } 
+                .con1 {
+                    font-size: 50px;
+                    height: 50px; 
+                    line-height: 50px;
+                }
+            }
+		</style>
+	</head>
+	<body>
+		<div id="box">
+			<div id="animate" class="animate">
+				<span style="font-size: 250px; height: 250px; line-height: 250px;left: 609px; opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">考</span>
+                <span style="font-size: 250px; height: 250px; line-height: 250px;left: 944px; opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">试</span>
+                <div class="res-date">
+                    <div id="res-day" class="res-day"></div>
+                    
+                    <div id ="res-hour" class="res-hour"></div>
+                    
+                </div>
+
+                <br>
+                <span class="con" >C</span>
+                <span class="con" >E</span>
+                <span class="con" >T</span>
+                <span class="con" >-</span>
+                <span class="con1" >4</span>
+            </div>
+
+            <div id="autor">
+            <a href="https://inkwall.cn/home">城墙墨</a>  
+            </div>
+
+            <div id="danMu">
+                <h3 style="color: #ff3f1a">单词背到哪了</h3>
+                <br>
+                <h3 style="color: #bbec08">abandon！abandon！abandon！！！</h3>
+            </div>
+            <script>
+                function resDay(){
+                    var setTime = new Date("2019/12/15 00:00:00");
+                    var nowTime = new Date();
+                    var rest = setTime.getTime()-nowTime.getTime();
+                    var day = parseInt(rest/1000/60/60/24);           
+                    return day+"天";
+                }
+                function resHour(){
+                    var setTime = new Date("2019/12/14 00:00:00");
+                    var nowTime = new Date();
+                    var rest = setTime.getTime()-nowTime.getTime();
+                    var day = parseInt(rest/1000/60/60/24);
+                    var hour = parseInt(rest/1000/60/60%24);
+                    return hour+"h";
+                }
+                setInterval(function(){
+                    var dateTime=resDay();
+                    var dateTime1=resHour();
+                    var resTime=document.getElementById("res-day");
+                    var resTime1=document.getElementById("res-hour");
+                    resTime.innerHTML = dateTime;
+                    resTime1.innerHTML = dateTime1;
+                },1000);
+            </script>             
+		</div>
+	</body>
+</html>
