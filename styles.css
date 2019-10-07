@@ -1,6 +1,7 @@
 *{
     margin: 0;
     padding: 0;
+    list-style: none;
 }
 
 body {
@@ -24,7 +25,7 @@ body {
     height: 50px;
     width: 100%;
     padding: 10px;
-    background: rgba(40,41,40,.6)
+    background: rgba(40,41,40,.6);
 }
 
 #header-wrapper {
@@ -120,7 +121,7 @@ li{
     position: relative;
     border-radius: 5px;   
 }
-
+/*头像*/
 #welcome-about .site-master .site-master-avatar {
     height: 100px;
     width: 100px;
@@ -234,7 +235,6 @@ li{
 #plugin-list-count {
     line-height: 40px;
     padding-top: 0;
-    padding-right: 15px;
 }
 
 #plugin-search-input {
@@ -246,8 +246,17 @@ li{
     margin-left: 10px;
 }
 /*博客*/
+
 #plugin-list {
-    width: 750px;
+    float: left;
+}
+
+#plugin-autor {
+    float: right;
+}
+
+#plugin-list {
+    width: 800px;
 }
 
 #plugin-list .plugin-on {
@@ -257,8 +266,7 @@ li{
     margin-bottom: 20px;
     background: white;
     padding: 25px;
-    position: relative;
-
+    position:relative;
     animation-duration: 1s;
     animation-fill-mode: both;
     animation-name: fadeInLeft;
@@ -281,8 +289,26 @@ li{
 #plugin-list .plugin-screenshot {
     width: 388.3px;
     height: 240px;
+    overflow: hidden;
+    position: relative;
 }
-
+/*遮罩层*/
+#mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: 80%;
+    background-image: url(https://cf.cndrew.cn/images/2019/10/06/b0620972b0f9717b6d96b3ec4c3c54c5.png);
+    opacity: 0;
+    background-repeat: no-repeat;
+}
+#mask:hover {
+    transition: .4s ease-in-out;
+    opacity: .8;
+    transform:scale(0.3)
+}
 #plugin-list .plugin-introduce {
     width: 320px;
     height: 180px;
@@ -297,8 +323,6 @@ li{
 
 #plugin-list .screenshot-img {
     width: 388.3px;
-    height: 240px;
-    size: 100%;
 }
 
 #plugin-list h2 {
@@ -314,7 +338,7 @@ li{
 
 #plugin-list .h-a:hover {
     color: rgb(26, 218, 20);
-    transition-duration: .5s;
+    transition: .3s ease-in-out;
 }
 .plugin-abstract {
     font-size: 15px;
@@ -349,7 +373,7 @@ li{
     box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12);
     position: absolute;
     top: -20px;
-    left: -30px;
+    right: -30px;
     height: 60px;
     width: 70px;
     padding-top: 10px;
@@ -368,6 +392,13 @@ li{
     font-size: 30px;
     font-weight: 700;
 }
+/*博主*/
+#plugin-autor {
+    padding-right: 15px;
+    height: 600px;
+    width: 300px;
+    background-color: black;
+}
 /*footer*/
 .end1 {
     color: rgb(231, 211, 211);
@@ -375,6 +406,7 @@ li{
 }
 
 footer {
+    clear: both;
     background-color:rgb(34, 30, 30);
     color: gray;
     text-align: left;
@@ -423,6 +455,7 @@ footer div {
 }
 /*welcome*/
 #welcome {
+    display: block;
     padding: 20px;
     background-color: white;
     width: 150px;
@@ -440,17 +473,25 @@ footer div {
     opacity: 1;
 }
 
-#welcome .close {
+#welcome .closebox {
     text-align: center;
     
 }
 
-#welcome .close a{
+#welcome .closebox a{
     padding:4px;
+    color: #48494d;
+    text-decoration: none;
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -ms-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;
+    cursor: pointer;
     text-decoration: none;
 }
 
-#welcome .close a:hover {
+#welcome .closebox a:hover {
     border: 1px solid gray;
     opacity: 0.8;
     border-radius: 5px;
