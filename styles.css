@@ -5,7 +5,7 @@
 }
 
 body {
-    background-color: rgb(238, 234, 234);
+    background-color: #f5f7f9;
     width: 100%;
 }
 #welcome-about { 
@@ -26,6 +26,7 @@ body {
     width: 100%;
     padding: 10px;
     background: rgba(40,41,40,.6);
+    z-index: 99;
 }
 
 #header-wrapper {
@@ -102,6 +103,7 @@ li{
     height: 100px;
     line-height: 100px;
     transition: opacity 0.7s;
+
 }
 
 #animate:hover {
@@ -167,6 +169,8 @@ li{
     margin: 15px;
     background-repeat: no-repeat;
     background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 1px 20px -6px rgba(0,0,0,.5);
 }
 
 
@@ -248,30 +252,18 @@ li{
 /*博客*/
 
 #plugin-list {
-    float: left;
+    float: right;
 }
 
 #plugin-autor {
-    float: right;
+    float: left;
 }
 
 #plugin-list {
     width: 800px;
+    margin: 0 15px;
 }
-
-#plugin-list .plugin-on {
-    margin-left: 15px;
-    width: 750px;
-    height: 250px;
-    margin-bottom: 20px;
-    background: white;
-    padding: 25px;
-    position:relative;
-    animation-duration: 1s;
-    animation-fill-mode: both;
-    animation-name: fadeInLeft;
-}
-
+/*这是啥*/
 @keyframes fadeInLeft  {
     from {
         opacity: 0;
@@ -282,6 +274,24 @@ li{
         transform: none;
     }      
 }
+#plugin-list .plugin-on {
+    margin-left: 15px;
+    width: 750px;
+    height: 250px;
+    margin-bottom: 20px;
+    background: white;
+    padding: 15px;
+    position:relative;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    animation-name: fadeInLeft;
+    box-shadow: 0 1px 10px -3px rgba(0,0,0,.5);
+    border-radius: 5px;
+}
+#plugin-list .plugin-on:hover {
+    box-shadow: 0 1px 20px -6px rgba(0,0,0,.5);
+}
+
 #plugin-list .plugin-screenshot,.plugin-introduce,.plugin-introduce-cate {
     float: left;
 }
@@ -394,10 +404,113 @@ li{
 }
 /*博主*/
 #plugin-autor {
-    padding-right: 15px;
-    height: 600px;
+    display: block;
+    margin-left: 15px;
+    height: 500px;
     width: 300px;
-    background-color: black;
+    position: static;
+    top: 90px;
+    border-radius: 5px;
+    box-shadow: 0 1px 10px -3px rgba(0,0,0,.5);
+}
+#autor-bg {
+    height: 150px;
+    background-image: url(images/十字路口.jpg);
+    background-size: 100%;
+    position: relative;
+}
+.autor-bg-a {
+    height:120px;
+    width: 120px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: absolute;
+    bottom: -50px;
+    left: 30%;
+
+}
+@keyframes doutui  {
+    25% {
+        transform: rotate(15deg);
+        transform:scale(1.2);
+    }   
+      50% {
+        transform: rotate(-10deg);
+        
+    }  
+    75% {
+        transform: rotate(10deg)
+    }  
+    100% {
+        transform: rotate(-15deg);
+    }  
+}
+.site-author:hover {
+    animation: doutui .5s ease-in-out;
+}
+#autor-name {
+    text-align: center;
+}
+#autor-name h3 {
+    font-family: STKaiti;
+    margin-top: 50px;
+    padding: 10px;
+}
+#autor-name p {
+    color: #fc6423;
+}
+#site-state {
+    margin-top: 10px;
+    text-align: center;
+}
+#site-state a {
+    text-decoration: none;
+
+    color:#0091c2!important;
+}
+#site-state a:hover {
+    background-color: rgba(137, 189, 35, .4);
+}
+#autor-site-post {
+    display: inline-block;
+    line-height: 20px;
+    padding: 10px;
+    border-right: 1px solid rgba(26, 25, 25, 0.2);
+}
+#autor-site-categories{
+    display: inline-block;
+    line-height: 20px;
+    border-left: 1px solid rgba(26, 25, 25, 0.2);
+    padding: 10px;
+}
+
+#autor-site-link {
+    overflow: auto;
+    width:190px;
+    margin: auto;
+    margin-top: 20px;
+}
+#site-link-qq,#site-link-wechat,#site-link-github {
+    float:left;
+    background-size: 100%;
+}
+#site-link-qq {
+    width: 50px;
+    height: 50px;
+
+    background-image: url(images/qq1.png);
+}
+#site-link-wechat {
+
+    width: 50px;
+    height: 50px;
+    margin: 0 20px;
+    background-image: url(images/wechat1.png);
+}
+#site-link-github{
+    width: 50px;
+    height: 50px;
+    background-image: url(images/github1.png);
 }
 /*footer*/
 .end1 {
@@ -497,4 +610,14 @@ footer div {
     border-radius: 5px;
     background-color: green;
     
+}
+/*雪特效*/
+#Snow{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 99999;
+    pointer-events: none;
 }
