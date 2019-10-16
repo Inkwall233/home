@@ -292,7 +292,45 @@
                     
 
                     <div id="plugin-autor">
+                        <div id="autor-bg">
+                            <a class="autor-bg-a" href="https://inkwall.cn/home">
+                                <img class="site-author" src="images/author.png" alt="头像" height="120px" width="120px" style="display:inline;">
+                            </a>
+                        </div>
+                        <div id="autor-name">
+                            <h3>城墙墨</h3>
+                            <p>
+                                如果喜欢那就坚持吧！
+                            </p>
+                        </div>
+                        <nav id="site-state">
+                            <div id="autor-site-post">
+                                <a class="post-1" href="#">
+                                    <span><b>3</b></span>
+                                    <br>
+                                    <span>分类</span>
+                                </a>
+                            </div>
+                            <div id="autor-site-categories">
+                                <a class="post-2" href="#">
+                                    <span><b>4</b></span>
+                                    <br>
+                                    <span>归档</span>
+                                </a>
+                            </div>
+                        </nav>
 
+                        <div id="autor-site-link">
+                            <div id="site-link-qq">
+                                <a href=""></a>
+                            </div>
+                            <div id="site-link-wechat">
+                                <a href=""></a>
+                            </div>
+                            <div id="site-link-github">
+                                <a href=""></a>
+                            </div>
+                        </div>
                     </div>
                 
             </div>
@@ -309,7 +347,7 @@
             <span id="span_day"></span>
             <br>
             <br>
-            designed by <a id="footer_auto" href="/about.html">inkWall</a>
+            designed by <a id="footer_auto" href="about.html">inkWall</a>
         </div>
         
     </footer>
@@ -341,7 +379,27 @@
         }
 
         show_time();
-    </script>
+        //温馨提示
+        //博主position: fix;下降900px;
+        window.onscroll = function(){scrollFunction()};
 
+        function scrollFunction(){
+            if (document.body.scrollTop>1600 || document.documentElement.scrollTop>1600){
+                document.getElementById("plugin-autor").style.position = "static";
+            }
+            else if(document.body.scrollTop>920 || document.documentElement.scrollTop>920){
+                document.getElementById("plugin-autor").style.position = "fixed";
+            }
+            else {
+                document.getElementById("plugin-autor").style.position = "static";
+            }
+        }
+
+    </script>
+    <div class="Snow">
+        <canvas id="Snow"></canvas>
+    </div>
+    
+<script src="xue.js"></script>
 </body>
 </html>
