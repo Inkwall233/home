@@ -322,13 +322,19 @@
 
                         <div id="autor-site-link">
                             <div id="site-link-qq">
-                                <a href=""></a>
+                                <a class="site-ink" href="https://inkwall.cn">
+                                    <img src="images/qq.png" alt="" class="site-link-img">
+                                </a>
                             </div>
                             <div id="site-link-wechat">
-                                <a href=""></a>
+                                <a class="site-ink href="">
+                                    <img src="images/wechat1.png" alt="" class="site-link-img">
+                                </a>
                             </div>
                             <div id="site-link-github">
-                                <a href=""></a>
+                                <a class="site-ink href="">
+                                    <img src="images/github1.png" alt="" class="site-link-img">
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -343,7 +349,7 @@
             <a class="end1" href="http://wpa.qq.com/msgrd?v=3&uin=2667229986&site=qq&menu=yes">联系我&nbsp;&nbsp;&nbsp;&nbsp;<img class="end2" src="https://i.loli.net/2019/07/23/5d366d4c92ba542364.jpg" alt="Q我吧" title="Q我吧"/></a>
             <br>
             <br>
-            <span>本站已经安全运行</span>
+            <span>本站已经勉强运行</span>
             <span id="span_day"></span>
             <br>
             <br>
@@ -353,10 +359,10 @@
     </footer>
 
     <div id="welcome">
-        <h3>欢迎</h3>
-        你好啊，来看我的小破站啦(´▽`ʃ♡ƪ)!!!
+        <h3 id="welH"></h3>
+        <p id="welP"></p>
         <div class="closebox">
-            <a href="javascript:void(0)" onclick="$('#welcome').slideUp('slow');$('.closebox').css('display','none');" title="关闭">我知道了</a>
+            <a href="javascript:void(0)" onclick="$('#welcome').slideUp('slow');$('.closebox').css('display','none');" title="关闭">关闭</a>
         </div>
     </div>    
     
@@ -380,6 +386,30 @@
 
         show_time();
         //温馨提示
+        var welH = document.getElementById("welH");
+        var welP = document.getElementById("welP");
+        var welToday = new Date();
+        var welHour = welToday.getHours();
+        if(welHour>20){
+            welH.innerHTML = "晚安";
+            welP.innerHTML = "&nbsp;我差不多该厌倦灰色了。--折木奉太郎";
+        }
+        else if(welHour>18){
+            welH.innerHTML = "晚上好";
+            welP.innerHTML = "&nbsp;被漆黑烈焰吞噬殆尽吧！--富樫勇太";
+        }
+        else if(welHour>12){
+            welH.innerHTML = "下午好";
+            welP.innerHTML = "&nbsp;今天的风儿，甚是喧嚣。--男高";
+        }
+        else if(welHour){
+            welH.innerHTML = "上午好";
+            welP.innerHTML = "&nbsp;喜欢上一个人是没有理由的！--一色诚";
+        }
+        else{
+            welH.innerHTML = "早安";
+            welP.innerHTML = "&nbsp;汝为有缘人，--夜斗";
+        }
         //博主position: fix;下降900px;
         window.onscroll = function(){scrollFunction()};
 
@@ -400,6 +430,7 @@
         <canvas id="Snow"></canvas>
     </div>
     
+    <!--修改于2019年12月14日-->
 <script src="xue.js"></script>
 </body>
 </html>
